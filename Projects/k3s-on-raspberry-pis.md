@@ -1,9 +1,9 @@
 ---
 layout: default
-title: K3s kubernetes cluster on raspberry pis
+title: K3s kubernetes cluster on Raspberry Pis
 ---
 
-# K3s kubernetes cluster on raspberry pis
+# K3s kubernetes cluster on Raspberry Pis
 
 ## Pre-requisites
 
