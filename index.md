@@ -4,7 +4,7 @@ title: Home
 ---
 
 # Hello, I'm Your James Frendo 👋
-Welcome to my portfolio website.
+Here under are the usual links.
 
 - [About Me](about.html)
 - [Projects](projects.html)
