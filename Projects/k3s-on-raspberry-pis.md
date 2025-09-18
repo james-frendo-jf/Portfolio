@@ -16,6 +16,6 @@ title: K3s kubernetes cluster on raspberry pis
 
 To install OS on the Raspberry Pi I inserted the SD card in my computer and used [Raspberry Pi Imager](https://www.raspberrypi.com/software/). This software is pretty simple to use, select the Raspberry Pi model, OS and storage (SD card inserted in the beginning).
 
-[[Images/k3s-on-raspberry-pis/raspberry-pi-imager.jpg]]
+[[../Images/k3s-on-raspberry-pis/raspberry-pi-imager.jpg]]
 
 In this case I used the Raspberry Pi OS lite (64-bit), reason being is that this OS has the bare minimum and as the name indicates, it is light.
