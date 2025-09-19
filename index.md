@@ -3,7 +3,7 @@ layout: default
 title: Home
 ---
 
-# Hello, I'm Your James Frendo 👋
+# Hello, I'm James Frendo 👋
 Here under are the usual links!
 
 - [About Me](about.html)
