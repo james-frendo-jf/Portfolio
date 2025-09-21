@@ -75,3 +75,6 @@ The following picture will show the top Raspberry Pi with a PoE hat.
 Finally, the next picture will show the 3 Raspberry Pis connected via the network switch only.
 
 ![Complete](../Images/k3s-on-raspberry-pis/complete.jpg)
+
+## Phase 3 - Installing K3s
+
