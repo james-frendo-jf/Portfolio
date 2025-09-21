@@ -15,19 +15,29 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
 
-      <h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+      <header>
+        <h1 class="site-title">
+          <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+        </h1>
 
-      {% if page.url == "/" %}
-        <p>{{ site.description }}</p>
-      {% elsif page.custom_description %}
-        <p>{{ page.custom_description }}</p>
-      {% endif %}
+        {%- if page.url == "/" -%}
+          <p class="site-description">{{ site.description }}</p>
+        {%- elsif page.custom_description -%}
+          <p class="site-description">{{ page.custom_description }}</p>
+        {%- endif -%}
 
-      {{ content }}
+        {% if site.github.is_project_page %}
+          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+        {% endif %}
+        {% if site.github.is_user_page %}
+          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+        {% endif %}
+      </header>
 
-      <footer>
-        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a></small></p>
-      </footer>
+      <main>
+        {{ content }}
+      </main>
+
     </div>
   </body>
 </html>
