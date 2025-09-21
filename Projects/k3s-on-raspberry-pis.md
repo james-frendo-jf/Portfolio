@@ -101,5 +101,6 @@ Normally, the IP address is set on eth0 (interface).
 
 Once you have all the details mentioned go on the worker nodes, install and configure by using this command.
 ```
+# Installing K3s and joining the worker node to the cluster
 curl -sfL https://get.k3s.io | K3S_URL=https://<Master_IP_Address>:6443 K3S_TOKEN=<Token> sh -
 ```
