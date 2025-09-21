@@ -11,11 +11,31 @@
       {% endif %}
     </title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
+    <style>
+      /* Center GitHub button + style */
+      .github-btn {
+        display: inline-block;
+        margin: 1em auto;
+        padding: 0.5em 1em;
+        background: #0f0;
+        color: #000 !important;
+        font-weight: bold;
+        border-radius: 5px;
+        text-decoration: none;
+        text-align: center;
+      }
+      .github-btn:hover {
+        background: #0c0;
+      }
+      .center {
+        text-align: center;
+      }
+    </style>
   </head>
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
 
-      <header>
+      <header class="center">
         <h1 class="site-title">
           <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </h1>
@@ -27,10 +47,15 @@
         {%- endif -%}
 
         {% if site.github.is_project_page %}
-          <p class="view"><a href="{{ site.github.repository_url }}">View the Project on GitHub <small>{{ site.github.repository_nwo }}</small></a></p>
+          <a class="github-btn" href="{{ site.github.repository_url }}">
+            View on GitHub
+          </a>
         {% endif %}
+
         {% if site.github.is_user_page %}
-          <p class="view"><a href="{{ site.github.owner_url }}">View My GitHub Profile</a></p>
+          <a class="github-btn" href="{{ site.github.owner_url }}">
+            View My GitHub Profile
+          </a>
         {% endif %}
       </header>
 
