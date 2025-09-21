@@ -48,7 +48,7 @@ I mounted the rack with Raspberry Pis in phases.
 
 First I mounted one Raspberry Pi and took 2 pictures as show below
 
-![Assemble Rack](../Images/k3s-on-raspberry-pis/assemble-rack.jpg)
+![Assemble Rack](../Images/k3s-on-raspberry-pis/assemble-rack.jpg | height=400)
 ![Assemble Rack from the side](../Images/k3s-on-raspberry-pis/assemble-rack-side.jpg)
 
 Then at this point I mounted the second Raspberry Pi and switched them on to make sure they connect to the local network. At this point I wasn't aware that the Raspberry Pi did not support PoE.
