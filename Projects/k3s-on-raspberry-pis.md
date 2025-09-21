@@ -46,35 +46,60 @@ Then on the Raspberry Pi you can switch off authentication using password in the
 
 I mounted the rack with Raspberry Pis in phases.
 
-First I mounted one Raspberry Pi and took 2 pictures as show below
+First I mounted one Raspberry Pi and took 2 pictures as show below.
 
-![Assemble Rack](../Images/k3s-on-raspberry-pis/assemble-rack.jpg | height=400)
-![Assemble Rack from the side](../Images/k3s-on-raspberry-pis/assemble-rack-side.jpg)
+<img src="../Images/k3s-on-raspberry-pis/assemble-rack.jpg" width="600" height="1000"/>
+
+<img src="../Images/k3s-on-raspberry-pis/assemble-rack-side.jpg" width="600" height="1000"/>
 
 Then at this point I mounted the second Raspberry Pi and switched them on to make sure they connect to the local network. At this point I wasn't aware that the Raspberry Pi did not support PoE.
 
 Here one can see that one Raspberry Pi is powered on but using the power cable.
 
-![Powered On](../Images/k3s-on-raspberry-pis/powered-on.jpg)
+<img src="../Images/k3s-on-raspberry-pis/powered-on.jpg" width="600" height="1000"/>
 
 In this picture one can visibly see that power and network cable are connected to the top one.
 P.S. The rack has a cable that is inserted in the SD card to make it more accessible to put in as one could see in the bottom Raspberry Pi. (Stronlgy not recommended to remove SD card while operational)
 
-![Powered On with network cable](../Images/k3s-on-raspberry-pis/powered-on-with-network-cable.jpg)
+<img src="../Images/k3s-on-raspberry-pis/powered-on-with-network-cable.jpg" width="600" height="1000"/>
 
 The next picture will show that both Raspberry Pis are connected and powering on the RGB lights and fan.
 
-![Powered On with 2 Raspberry Pis](../Images/k3s-on-raspberry-pis/powered-on-with-2-raspi.jpg)
+<img src="../Images/k3s-on-raspberry-pis/powered-on-with-2-raspi.jpg" width="600" height="1000"/>
 
 At this stage, I started doing some research to discover how the Raspberry Pi can be powered on via PoE and to remove a cable out of the way. While searching I uncovered that a PoE hat was needed to support powering up without a power cable.
 
 The following picture will show the top Raspberry Pi with a PoE hat.
 
-![Powered on with PoE hat](../Images/k3s-on-raspberry-pis/powered-on-with-poe-hat.jpg)
+<img src="../Images/k3s-on-raspberry-pis/powered-on-with-poe-hat.jpg" width="600" height="1000"/>
 
 Finally, the next picture will show the 3 Raspberry Pis connected via the network switch only.
 
-![Complete](../Images/k3s-on-raspberry-pis/complete.jpg)
+<img src="../Images/k3s-on-raspberry-pis/complete.jpg" height="1000"/>
 
 ## Phase 3 - Installing K3s
 
+Select one Raspberry Pi to be the master and install the K3s by using the following command.
+```
+# Installing K3s
+curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s -
+
+# Checking K3s service status
+systemctl status k3s
+```
+
+Once you install the K3s on the master, it will output a token which you need to save for the next step. Also, you need the IP address of the master.
+
+To get the IP address you can use the following command or if you have set a static IP address, you would already know it.
+
+```
+# To get the IP address
+ip address
+```
+
+Normally, the IP address is set on eth0 (interface).
+
+Once you have all the details mentioned go on the worker nodes, install and configure by using this command.
+```
+curl -sfL https://get.k3s.io | K3S_URL=https://<Master_IP_Address>:6443 K3S_TOKEN=<Token> sh -
+```
