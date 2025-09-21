@@ -12,22 +12,22 @@
     </title>
     <link rel="stylesheet" href="{{ "/assets/css/style.css?v=" | append: site.github.build_revision | relative_url }}">
     <style>
-      /* Center GitHub button + style */
+      /* GitHub button styling */
       .github-btn {
         display: inline-block;
         margin: 1em auto;
-        padding: 0.5em 1em;
+        padding: 0.5em 1.2em;
         background: #0f0;
         color: #000 !important;
         font-weight: bold;
         border-radius: 5px;
         text-decoration: none;
-        text-align: center;
       }
       .github-btn:hover {
         background: #0c0;
       }
-      .center {
+      /* Ensure everything stays centered like hacker theme */
+      body, header, main, footer {
         text-align: center;
       }
     </style>
@@ -35,7 +35,7 @@
   <body>
     <div class="container-lg px-3 my-5 markdown-body">
 
-      <header class="center">
+      <header>
         <h1 class="site-title">
           <a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
         </h1>
