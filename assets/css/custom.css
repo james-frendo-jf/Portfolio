@@ -1,0 +1,17 @@
+/* Prevent image distortion */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
+}
+
+/* Adjust bullet point spacing */
+ul {
+  margin: 0;
+  padding-left: 1.5em;
+}
+
+ul li {
+  margin-bottom: 0.5em;
+}
