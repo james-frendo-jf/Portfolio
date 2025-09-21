@@ -1,6 +1,7 @@
 ---
 layout: default
 title: About
+custom_description: "A little more about me."
 ---
 
 # About Me

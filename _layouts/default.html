@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ page.lang | default: site.lang | default: "en" }}">
+  <head>
+    <meta charset="utf-8">
+    <title>{{ page.title | escape }} - {{ site.title | escape }}</title>
+  </head>
+  <body>
+    <header>
+      <h1><a href="{{ "/" | relative_url }}">{{ site.title | escape }}</a></h1>
+
+      {% if page.url == "/" %}
+        <p>{{ site.description }}</p>
+      {% elsif page.custom_description %}
+        <p>{{ page.custom_description }}</p>
+      {% endif %}
+    </header>
+
+    <main>
+      {{ content }}
+    </main>
+  </body>
+</html>
