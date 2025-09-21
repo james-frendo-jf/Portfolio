@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Projects
+description: "Projects that I did"
 ---
 
 # Projects
