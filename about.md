@@ -16,5 +16,4 @@ I enjoy staying active through running, unwinding with games, and exploring new 
 - **CI/CD & Version Control:** Git, GitHub, GitLab, GitHub Actions, CircleCI
 - **Monitoring & Observability:** Prometheus, Grafana, Zabbix, Nagios, ElasticSearch
 - **Other Tools/Technologies:** Jira, Confluence, Virtualization (VMs), Postgres, MySQL, Telecoms technologies (OCS, HSS)
-- **Core Competencies:** Troubleshooting, Problem Solving, Communications, Technical Leadership, Automation
- your skills, and interests.
+- **Core Competencies:** Troubleshooting, Problem Solving, Communications, Automation
