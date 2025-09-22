@@ -80,6 +80,7 @@ Finally, the next picture will show the 3 Raspberry Pis connected via the networ
 ## Phase 3 - Installing K3s
 
 Select one Raspberry Pi to be the master and install the K3s by using the following command.
+
 ```
 # Installing K3s
 curl -sfL https://get.k3s.io | K3S_KUBECONFIG_MODE="644" sh -s -
@@ -100,6 +101,7 @@ ip address
 Normally, the IP address is set on eth0 (interface).
 
 Once you have all the details mentioned go on the worker nodes, install and configure by using this command.
+
 ```
 # Installing K3s and joining the worker node to the cluster
 curl -sfL https://get.k3s.io | K3S_URL=https://<Master_IP_Address>:6443 K3S_TOKEN=<Token> sh -
